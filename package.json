@@ -4,11 +4,14 @@
   "description": "Create react SNS app",
   "main": "index.js",
   "scripts": {
-    "dev": "next"
+    "dev": "next",
+    "build": "next build"
   },
   "author": "DavidNa",
   "license": "ISC",
   "dependencies": {
-    "next": "^9.5.5"
+    "next": "^9.5.5",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   }
 }
