@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 
 
 const AppLayout = ({children}) => {
   return (
     <div>
         <div>
-            공통메뉴
+          <Link href="/"><a>Node Bird</a></Link>
+          <Link href="/profile"><a>Profile</a></Link>
+          <Link href="/signup"><a>Node Bird</a></Link>
         </div>
         {children}
     </div>

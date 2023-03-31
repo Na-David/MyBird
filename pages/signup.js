@@ -1,9 +1,12 @@
 import React from 'react'
+import AppLayout from '../components/AppLayout'
 
 const SignUp = () => {
   return (
     <div>
-      회원가입
+        <AppLayout>
+            <div>Hello Signup</div>
+        </AppLayout>
     </div>
   )
 }
