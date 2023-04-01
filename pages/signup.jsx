@@ -1,14 +1,14 @@
 import React from 'react'
-import AppLayout from '../components/AppLayout'
+import AppLayout from '../components/AppLayout';
+import Head from 'next/head';
 
 const SignUp = () => {
   return (
     <>
-    <div>
-        <AppLayout>
-            <div>Hello Signup</div>
-        </AppLayout>
-    </div>
+    <Head>
+      <title>Sign Up | My Bird</title>
+    </Head>
+        <AppLayout><div>Hello SignUp</div></AppLayout> 
     </>
   )
 }

@@ -1,14 +1,14 @@
 import React from 'react'
 import AppLayout from '../components/AppLayout'
+import Head from 'next/head';
 
 const Profile = () => {
   return (
     <>
-    <div>
-        <AppLayout>
-            <div>Hello Profile</div>
-        </AppLayout> 
-    </div>
+    <Head>
+      <title>My Profile | My Bird</title>
+    </Head>
+        <AppLayout><div>Hello Profile</div></AppLayout> 
     </>
   )
 }
