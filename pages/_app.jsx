@@ -1,10 +1,17 @@
 import React from 'react'
-import 'antd/dist/antd.css';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
+import 'antd/dist/reset.css'
+import Head from 'next/head';
 
 const MyBird = ({Component}) => {
   return (
-    <Component />
+    <>
+    <Head>
+        <meta charSet='utf-8' />
+        <title>My--Bird</title>
+    </Head>
+        <Component />
+    </>
   )
 };
 
