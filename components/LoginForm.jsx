@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback } from 'react';
 import {Form, Input, Button} from 'antd';
 import Link from 'next/link';
 import styled from 'styled-components';
@@ -7,7 +7,7 @@ const ButtonWrapper = styled.div`
     margin-top: 10px;    
 `
 
-const LoginForm = ({setIsloggedIn}) => {
+const LoginForm = ({setIsLoggedIn}) => {
 
     const [id, setId] = useState('');
     const [password, setPassword] = useState('');
@@ -22,8 +22,8 @@ const LoginForm = ({setIsloggedIn}) => {
     
     const onSubmitForm = useCallback(() => {
         //Already effect as onFinishDefault
-        console.log(id, password);
-        setIsloggedIn(true);
+        //console.log(id, password);
+        setIsLoggedIn(true);
     },[id, password])
 
 
