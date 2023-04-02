@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import {Form, Input, Button} from 'antd';
 import Link from 'next/link';
 
@@ -6,6 +6,15 @@ const LoginForm = () => {
 
     const [id, setId] = useState('');
     const [password, setPassword] = useState('');
+
+    const onChangeId = useCallback((e) => {
+        setId(e.target.value);
+    },[])
+
+    const onChangePassword = useCallback((e) => {
+        setPassword(e.target.value);
+    },[])
+
 
   return (
     <div>
