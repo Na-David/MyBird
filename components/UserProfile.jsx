@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Card from 'antd';
 
 const UserProfile = () => {
   return (
-    <div>
-      User Profile
-    </div>
+    <Card>
+
+    </Card>
   )
 }
 
