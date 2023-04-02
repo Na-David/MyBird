@@ -7,7 +7,7 @@ const ButtonWrapper = styled.div`
     margin-top: 10px;    
 `
 
-const LoginForm = () => {
+const LoginForm = ({setIsloggedIn}) => {
 
     const [id, setId] = useState('');
     const [password, setPassword] = useState('');
@@ -20,11 +20,16 @@ const LoginForm = () => {
         setPassword(e.target.value);
     },[])
     
+    const onSubmitForm = useCallback(() => {
+        //Already effect as onFinishDefault
+        console.log(id, password);
+        setIsloggedIn(true);
+    },[id, password])
 
 
   return (
     <div>
-        <Form>
+        <Form onFinish={onSubmitForm}>
             <div>
                 <label htmlFor='user-id'>ID: </label> <br />
                 <Input name='user-id' value={id} onChange={onChangeId} required />
