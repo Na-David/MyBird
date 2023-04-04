@@ -3,8 +3,8 @@ import AppLayout from '../components/AppLayout'
 import Head from 'next/head';
 
 import NicknameEditForm from '../components/NicknameEditForm';
-import FollowingList from '../components/FollowingList';
-import FollowerList from '../components/FollowerList';
+import FollowList from '../components/FollowList';
+
 
 const Profile = () => {
 
@@ -18,8 +18,8 @@ const Profile = () => {
     </Head>
         <AppLayout>
           <NicknameEditForm />
-          <FollowingList header="Following List" data={followingList} />
-          <FollowerList header="Follower List" data={followerList} />
+          <FollowList header="Following List" data={followingList} />
+          <FollowList header="Follower List" data={followerList} />
         </AppLayout> 
     </>
   )
