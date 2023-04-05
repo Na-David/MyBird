@@ -11,9 +11,9 @@ const SignUp = () => {
     setId(e.target.value);
   },[])
 
-  const [nick, setNick] = useState('');
-  const onChangeNick = useCallback((e) => {
-    setNick(e.target.value);
+  const [nickname, setNickname] = useState('');
+  const onChangeNickname = useCallback((e) => {
+    setNickname(e.target.value);
   },[])
 
   const [password, setPassword] = useState('');
@@ -36,11 +36,22 @@ const SignUp = () => {
       </div>
       <div>
         <label htmlFor='user-nick'>Nickname: </label> <br />
-        <Input name='user-nick' value={nick} required onChange={onChangeNick} />
+        <Input name='user-nick' value={nickname} required onChange={onChangeNickname} />
       </div>
       <div>
         <label htmlFor='user-password'>Password: </label><br />
         <Input name='user-password' type='password' value={password} required onChange={onChangePassword} />
+      </div>
+      <div>
+        <label htmlFor='user-password-check'>Check the Password</label> <br />
+        <Input 
+          name = 'user-password-check'
+          type= 'password'
+          value={passwordCheck}
+          required
+          onChange={onChangePasswordCheck}
+          
+        />
       </div>
 
 
