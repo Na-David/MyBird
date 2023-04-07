@@ -2,24 +2,26 @@ import React, { useCallback, useState } from 'react'
 import AppLayout from '../components/AppLayout';
 import Head from 'next/head';
 import { Form, Input} from 'antd';
+import useInput from '../hooks/useInput';
 
 
 const SignUp = () => {
 
-  const [id, setId] = useState('');
-  const onChangeId = useCallback((e) => {
-    setId(e.target.value);
-  },[])
-
-  const [nickname, setNickname] = useState('');
-  const onChangeNickname = useCallback((e) => {
-    setNickname(e.target.value);
-  },[])
-
-  const [password, setPassword] = useState('');
-  const onChangePassword = useCallback((e) => {
-    setPassword(e.target.value);
-  },[])
+  const [id, onChangeId] = useInput('');
+  // const [id, setId] = useState('');
+  // const onChangeId = useCallback((e) => {
+  //   setId(e.target.value);
+  // },[])
+  const [nickname, onChangeNickname] = useInput('');
+  // const [nickname, setNickname] = useState('');
+  // const onChangeNickname = useCallback((e) => {
+  //   setNickname(e.target.value);
+  // },[])
+  const [password, onChangePassword] = useInput('');
+  // const [password, setPassword] = useState('');
+  // const onChangePassword = useCallback((e) => {
+  //   setPassword(e.target.value);
+  // },[])
   const onSubmit = useCallback(() => {
     
   },[])
