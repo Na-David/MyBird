@@ -2,7 +2,12 @@ import React, { useCallback, useState } from 'react'
 import AppLayout from '../components/AppLayout';
 import Head from 'next/head';
 import { Form, Input} from 'antd';
+import styled from 'styled-components';
 import useInput from '../hooks/useInput';
+
+const ErrorMessage = styled.div`
+  color: red;
+`;
 
 
 const SignUp = () => {
@@ -22,6 +27,14 @@ const SignUp = () => {
   // const onChangePassword = useCallback((e) => {
   //   setPassword(e.target.value);
   // },[])
+
+  const [passwordCheck, setPasswordCheck] = useState('');
+  const [passwordError, setPasswordError] = useState(false);
+  const onChangePasswordCheck = useCallback((e) => {
+    setPasswordCheck(e.target.value);
+    setPasswordError(e.target.value !== password);
+  },[password])
+
   const onSubmit = useCallback(() => {
     
   },[])
@@ -52,8 +65,8 @@ const SignUp = () => {
           value={passwordCheck}
           required
           onChange={onChangePasswordCheck}
-          
         />
+        {passwordError && <ErrorMessage>Wrong Password</ErrorMessage>}
       </div>
 
 

@@ -16,15 +16,7 @@ const FormWrapper = styled(Form)`
 const LoginForm = ({setIsLoggedIn}) => {
 
     const [id, onChangeId] = useInput('');
-    // const [id, setId] = useState('');
-    // const onChangeId = useCallback((e) => {
-    //     setId(e.target.value);
-    // },[])
     const [password, onChangePassword] = useInput('');
-    // const [password, setPassword] = useState('');
-    // const onChangePassword = useCallback((e) => {
-    //     setPassword(e.target.value);
-    // },[])
     
     const onSubmitForm = useCallback(() => {
         //Already effect as onFinishDefault
