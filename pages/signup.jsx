@@ -94,6 +94,9 @@ const SignUp = () => {
             <ErrorMessage>You need to agree above term.</div>
           )}
         </div>
+        <div style={{marginTop: 10}}>
+          <Button type="primary" htmlType="submit">Sign Up</Button>
+        </div>
       </Form>
     </AppLayout>
   );
