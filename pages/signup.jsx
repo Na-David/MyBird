@@ -43,7 +43,15 @@ const SignUp = () => {
     setTermError(false);
   }, []);
 
-  const onSubmit = useCallback(() => {}, []);
+  const onSubmit = useCallback(() => {
+    if (password !== passwordCheck) {
+      return setPasswordError(true);
+    }
+    if (!term) {
+      return setTermError(true);
+    }
+    console.log(id, nickname, password);
+  }, [password, passwordCheck, term]);
 
   return (
     <AppLayout>
@@ -91,11 +99,13 @@ const SignUp = () => {
             I will be happy
           </Checkbox>
           {termError && (
-            <ErrorMessage>You need to agree above term.</div>
+            <ErrorMessage>You need to agree above term.</ErrorMessage>
           )}
         </div>
-        <div style={{marginTop: 10}}>
-          <Button type="primary" htmlType="submit">Sign Up</Button>
+        <div style={{ marginTop: 10 }}>
+          <Button type="primary" htmlType="submit">
+            Sign Up
+          </Button>
         </div>
       </Form>
     </AppLayout>
